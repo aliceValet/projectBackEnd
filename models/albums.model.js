@@ -5,10 +5,10 @@ const albumSchema = new mongoose.Schema(
     Title: {
       type :String,
       required: true
-    }
+    },
     Release : Date,
     Genre : String,
-    Cover-url : String,
+    Cover_url : String,
     Tracks: [mongoose.Schema.Types.ObjectId]
 
   },

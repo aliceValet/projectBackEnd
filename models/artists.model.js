@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 
 const artistSchema = new mongoose.Schema(
   {
-    firstName: {
+    Name: {
       type: String,
       required: true
     },
-    lastName: String,
     Birthday : Date,
     Followers : Number,
     Albums: [mongoose.Schema.Types.ObjectId]

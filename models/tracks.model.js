@@ -5,7 +5,7 @@ const trackSchema = new mongoose.Schema(
     Title: {
       type :String,
       required: true
-    }
+    },
     Duration : Number,
     Listenings : Number,
     Likes : Number,

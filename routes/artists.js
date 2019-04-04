@@ -4,14 +4,17 @@ var router = express.Router();
 var artist = require('../controllers/artists.controller');
 
 /* GET one user */
-router.get('/:userId', user.findOne);
+router.get('/:artistId', artist.findOne);
+
+/*GET all artists */
+router.get('/', artist.findAll);
 
 /* DELETE  one user */
-router.delete('/:userId', user.delete);
+router.delete('/:artistId', artist.delete);
 /* update  one user */
-router.post('/:userId', user.update);
+router.post('/:artistId', artist.update);
 
 /* create  one user */
-router.put('/', user.create);
+router.put('/', artist.create);
 
 module.exports = router;
