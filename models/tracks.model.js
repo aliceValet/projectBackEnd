@@ -9,7 +9,7 @@ const trackSchema = new mongoose.Schema(
     Duration : Number,
     Listenings : Number,
     Likes : Number,
-    Featuring : [mongoose.Schema.Types.ObjectId]
+    Featuring : [{type : mongoose.Schema.Types.ObjectId, ref: 'Artist'}]
 
   },
   {

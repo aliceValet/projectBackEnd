@@ -9,7 +9,7 @@ const albumSchema = new mongoose.Schema(
     Release : Date,
     Genre : String,
     Cover_url : String,
-    Tracks: [mongoose.Schema.Types.ObjectId]
+    Tracks: [{type : mongoose.Schema.Types.ObjectId, ref:'Tracks'}]
 
   },
   {

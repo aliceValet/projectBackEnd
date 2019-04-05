@@ -9,9 +9,10 @@ var usersRouter = require('./routes/users');
 var artistRouter = require('./routes/artists');
 var albumRouter = require('./routes/albums');
 var trackRouter = require('./routes/tracks');
+var cors = require('cors');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/Artists');
+mongoose.connect('mongodb://localhost:27017/Artists',{ useNewUrlParser: true });
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

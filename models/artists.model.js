@@ -8,7 +8,7 @@ const artistSchema = new mongoose.Schema(
     },
     Birthday : Date,
     Followers : Number,
-    Albums: [mongoose.Schema.Types.ObjectId]
+    Albums: [{type : mongoose.Schema.Types.ObjectId, ref : 'Album'}]
 
   },
   {
